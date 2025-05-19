@@ -89,13 +89,13 @@ const FormModal = ({ isOpen, onClose }) => {
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/70 backdrop-blur-sm transition-opacity duration-300">
           <div
             ref={modalRef}
-            className="bg-white rounded-lg shadow-2xl w-full max-w-3xl mx-4 overflow-hidden transform transition-all duration-300 ease-in-out"
+            className="bg-white rounded-lg relative shadow-2xl w-full max-w-3xl mx-4 overflow-hidden transform transition-all duration-300 ease-in-out"
           >
             <div className="flex items-center justify-between border-t-7 border-[#0097B2] p-4">
-              <h3 className="text-[22px] font-semibold text-[#0097B2]">Ask Your Question</h3>
+
               <button
                 onClick={onClose}
-                className="text-gray-500 hover:text-gray-700 transition-colors cursor-pointer"
+                className="text-gray-500 hover:text-gray-700 transition-colors cursor-pointer absolute top-5 right-5"
               >
                 <X size={20} />
               </button>

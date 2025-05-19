@@ -84,9 +84,9 @@ const QuestionForm = ({ onClose, onSubmitSuccess }) => {
 
   return (
     <div className="relative">
-      <div className="bg-white rounded-xl p-6 w-full font-sans">
-        <h2 className="text-3xl font-bold text-[#0097B2] mb-6 text-center tracking-tight">
-          Submit Your Question
+      <div className="bg-white rounded-xl w-full font-sans">
+        <h2 className="text-3xl font-bold text-[#0097B2] mb-10 text-center tracking-tight">
+          Ask us your questions and we'll write back!
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex gap-4">

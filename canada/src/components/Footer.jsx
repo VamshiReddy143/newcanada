@@ -5,10 +5,13 @@ const Footer = ({ onOpenModal }) => {
     <footer className="">
       <div className="absolute bottom-5 px-10 flex items-end w-full">
         <div
-          className="flex md:flex-col lg:flex-row items-center gap-7 bg-[#0097B2] lg:px-7 py-3 px-2 rounded-xl cursor-pointer"
+          className="flex md:flex-col lg:flex-row items-center gap-7 bg-[#0097B2] lg:px-7 py-3 px-2 rounded-xl cursor-pointer hover:scale-105 transition-transform duration-200 ease-in-out"
           onClick={onOpenModal}
         >
-          <img src="/letter.png" className="w-[80px]" />
+          <img
+            src="/letter.png"
+            className="w-[80px] hover:scale-110 hover:rotate-6 transition-transform duration-200 ease-in-out"
+          />
           <h3 className="font-bold text-center text-white text-[2em] leading-[40px]">
             Ask the Experts <span className="block">a question, and</span> we'll write back!
           </h3>

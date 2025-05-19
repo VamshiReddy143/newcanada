@@ -107,10 +107,10 @@ const VideoModal = ({ isOpen, onClose, title, Question, videoSrc, region }) => {
                     </div>
                     <button
                         onClick={() => {
-                            console.log('Close button clicked');
+                          
                             onClose();
                         }}
-                        className="text-gray-500 hover:text-gray-700 pb-10 transition-colors"
+                        className="text-gray-500 cursor-pointer hover:text-gray-700 pb-10 transition-colors"
                     >
                         <X size={20} />
                     </button>

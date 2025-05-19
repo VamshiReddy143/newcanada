@@ -2,26 +2,26 @@ import React, { useRef, useState } from 'react';
 
 const Header = ({ setModalState }) => {
   // Region data for pins
-  const regions = [
+ const regions = [
     {
       imgSrc: '/gundu.png',
-      style: { top: '75%', left: '4%' },
+      style: { top: '71%', left: '3.5%' },
       region: 'WEST COAST',
-      title: 'ADAM OLSEN (STHENEP)',
+      title: 'ADAM OLSEN (SŦHENEP)',
       Question: 'What do the Southern Resident Orcas need to be healthy?',
       videoSrc: '/videos/adam.mp4',
     },
     {
       imgSrc: '/img2.png',
-      style: { top: '85%', left: '70%' },
+      style: { top: '91%', left: '71%' },
       region: 'OTTAWA',
       title: 'JULIA LAFORAGES-NATURE CANADA',
-      Question: 'How can we protect the Orcas home?',
+      Question: "How can we protect the Orcas' home?",
       videoSrc: "/videos/julia.mp4",
     },
     {
       imgSrc: '/img3.png',
-      style: { top: '65%', left: '90%' },
+      style: { top: '67%', left: '91%' },
       region: 'EAST COAST',
       title: 'REBECCA BRUSHETT - ECOLOGY ACTION CENTER',
     Question: 'What is the Laurentian Channel Marine Protected Area?',
@@ -82,35 +82,14 @@ const Header = ({ setModalState }) => {
 };
 
 const LocationPin = ({ imgSrc, style, onClick }) => {
-  const pinRef = useRef(null);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const timeoutRef = useRef(null);
-  const distance = { x: 15, y: 15 }; // Same as balls
-
-  const handleMouseMove = (e) => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => {
-      setPosition(distance);
-    }, 10);
-  };
-
-  const handleMouseLeave = () => {
-    setPosition({ x: 0, y: 0 });
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-  };
-
   return (
     <div
-      className="absolute flex flex-col items-center cursor-pointer"
+      className="absolute flex flex-col items-center cursor-pointer hover:scale-110 transition-transform duration-200 ease-in-out"
       style={{
         ...style,
-        transform: `translate(-50%, -100%) translate(${position.x}px, ${position.y}px)`,
-        transition: 'transform 200ms ease-in-out',
+        transform: 'translate(-50%, -100%)', // Keep pin anchored at its position
       }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
       onClick={onClick}
-      ref={pinRef}
     >
       {/* Circle with border and image */}
       <div
