@@ -56,7 +56,7 @@ const Header = ({ setModalState }) => {
           Click the images to hear <span className="block">from our Ocean Experts</span>
         </h1>
         <div>
-<img src="/logo.png" className="w-[150px] md:w-[200px] lg:w-[300px] absolute top-4 right-4" />
+<img src="/logo.png" className="w-[150px] md:w-[200px] lg:w-[350px] absolute top-4 right-4" />
 
         </div>
       </div>
