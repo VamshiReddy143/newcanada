@@ -51,12 +51,12 @@ const Header = ({ setModalState }) => {
     <div className="bg-[#002B6B] text-white px-5 py-10 relative overflow-hidden">
       {/* Title Section */}
       <div className="flex items-start justify-between">
-<h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold absolute top-4 left-4">
+<h1 className="text-xl sm:text-2xl md:text-[2em] lg:text-[2.6em] font-bold absolute top-4 left-4">
 
           Click the images to hear <span className="block">from our Ocean Experts</span>
         </h1>
         <div>
-<img src="/logo.png" className="w-[150px] md:w-[200px] lg:w-[350px] absolute top-4 right-4" />
+<img src="/logo.png" className="w-[150px] md:w-[300px] lg:w-[350px] absolute top-4 right-4" />
 
         </div>
       </div>
