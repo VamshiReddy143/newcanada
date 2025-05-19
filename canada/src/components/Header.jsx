@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+
 
 const Header = ({ setModalState }) => {
   // Region data for pins
@@ -51,20 +51,26 @@ const Header = ({ setModalState }) => {
     <div className="bg-[#002B6B] text-white px-5 py-10 relative overflow-hidden">
       {/* Title Section */}
       <div className="flex items-start justify-between">
-        <h1 className="text-[2em] font-bold leading-[40px] absolute top-10 left-10">
+<h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold absolute top-4 left-4">
+
           Click the images to hear <span className="block">from our Ocean Experts</span>
         </h1>
         <div>
-          <h1 className="text-[3em] font-extrabold leading-[50px] absolute top-10 right-10">
-            CRITICAL<span className="block"> DISTANCE</span>
-          </h1>
+<img src="/logo.png" className="w-[150px] md:w-[200px] lg:w-[300px] absolute top-4 right-4" />
+
         </div>
       </div>
 
       {/* Map and Pins */}
-      <div className="flex items-center justify-center pl-20 md:pt-20 lg:pt-0">
-        <div className="relative w-[46em]">
-          <img src="/map.jpg" className="w-full h-auto" alt="Map" />
+      <div className="flex items-center justify-center lg:pl-20 md:pt-50 lg:pt-0   md:ml-10 ">
+      <div className="relative w-full max-w-[800px] mx-auto">
+
+<img
+  src="/map.jpg"
+  className="w-full h-auto aspect-[4/3]" // maintains consistent ratio
+  alt="Map"
+/>
+
 
           {/* Location Pins */}
           {regions.map((region, index) => (
@@ -93,7 +99,7 @@ const LocationPin = ({ imgSrc, style, onClick }) => {
     >
       {/* Circle with border and image */}
       <div
-        className="w-30 h-30 rounded-full border-8 border-[#0097B2] bg-white overflow-hidden relative"
+        className="lg:w-50 lg:h-50 md:w-40 md:h-40 w-32 h-32 rounded-full border-8 border-[#0097B2] bg-white overflow-hidden relative"
         style={{ zIndex: 10 }}
       >
         <img
